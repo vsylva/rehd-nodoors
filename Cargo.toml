@@ -1,0 +1,18 @@
+[package]
+edition = "2024"
+name = "rehd-nodoors"
+publish = false
+
+[dependencies]
+libmem = {version = "5.0.4", default-features = false}
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = "fat"
+opt-level = 3
+overflow-checks = false
+panic = 'abort'
+strip = true
